@@ -31,6 +31,7 @@
   4. a.txt 파일을 수정하고, “update a.txt”라는 커밋 메세지로 커밋 생성
   5. 커밋 목록 확인
 
+## day3 : Github
 ### Github
 - 명령어
   - git remote -v
