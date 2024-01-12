@@ -32,7 +32,6 @@
   5. 커밋 목록 확인
 
 ## day3 : Github
-### Github
 - 명령어
   - git remote -v
   - git clone 'remote_repo_url'
