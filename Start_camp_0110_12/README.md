@@ -39,6 +39,8 @@
   - git push -u origin master
   - git pull 'remote_repo_url'
   ! pull과 clone의 차이점은 local에 없을 때만 가능(.git 파일이 없을 때)
+
 .gitignore - 이미 git의 관리를 받은 파일이나 디렉토리는 나중에 gitignore에 작성해도 적용되지 않음
+
 [gitignore 목록을 만들어주는 사이트](https://www.toptal.com/developers/gitignore/)
   
