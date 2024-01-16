@@ -29,9 +29,9 @@
 
 **Range**
 
-range(n) : 0~n-1
+range(n) : 0\~n-1
 <br>
-range(n, m) : n~m-1
+range(n, m) : n\~m-1
 
 1. 주로 반복문과 함께 사용
 
