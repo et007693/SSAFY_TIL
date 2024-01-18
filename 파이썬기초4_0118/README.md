@@ -144,7 +144,7 @@ from math import *
 
 - enumerate
 
-iterable 객체의 각 요소에 대해 인덱스와 함께 반환하는 내장함수
+    iterable 객체의 각 요소에 대해 인덱스와 함께 반환하는 내장함수
 
 <br>
 
