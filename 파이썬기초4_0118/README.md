@@ -39,6 +39,7 @@ from my_math import sqrt
 
 # 모듈 내 모든 요소를 한번에 import 하는 * 표기는 권장 X
 from math import *
+```
 
 ## 파이썬 표준 라이브러리(PIL)
 
