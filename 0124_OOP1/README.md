@@ -81,7 +81,7 @@
     - @classmethod 데코레이터를 사용하여 정의
     - 호출 시, 첫번째 인자로 호출하는 클래스가 전달됨
 
-    ![Alt text](image-1.png)
+    ![Alt text](./img/image-1.png)
 
 3. 스태틱(정적) 메서드
 
@@ -93,7 +93,7 @@
     - 호출 시 필수적으로 작성해야 매개변수가 없음
     - 즉 객체 상태나 클래스 상태를 수정할 수 없으며 단지 기능만을 위한 메서드로 사용
 
-    ![Alt text](image-2.png)
+    ![Alt text](./img/image-2.png)
 
 ## 정리
 
