@@ -1,4 +1,8 @@
 # swea_4837
+'''
+https://swexpertacademy.com/main/talk/solvingClub/problemView.do?solveclubId=AY1S2R462h4DFAWX&contestProbId=AXO-1Zh6aPEDFAXS&probBoxId=AY1andpK_vQDFAWX&type=USER&problemBoxTitle=240131_List2_1&problemBoxCnt=3
+
+'''
 T = int(input())
 A = [i for i in range(1, 13)]
 
