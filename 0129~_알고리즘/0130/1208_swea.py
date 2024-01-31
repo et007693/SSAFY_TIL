@@ -15,6 +15,9 @@ https://swexpertacademy.com/main/talk/solvingClub/problemView.do?solveclubId=AY1
 
     3. for 문을 써야 하는지 if 문을 써야 하는지 
 
+    4. while 문 종료 조건 설정
+        시작 부분에 해야 할지 if 문으로 따로 설정해야 할지
+
 배운 것
     1. 정렬할 때 index만 사용
     -> for i in arr 대신 for i in range(arr) 사용
