@@ -15,8 +15,8 @@ for _ in range(10):
         max_sum.append(sum([i[c] for i in arr]))
         max_sum.append(sum(arr[c]))
 
-    max_sum.append(sum([arr[i][i] for i in range(10)]))
-    max_sum.append(sum([arr[9-i][0+i] for i in range(10)]))
+    max_sum.append(sum([arr[i][i] for i in range(100)]))
+    max_sum.append(sum([arr[99-i][0+i] for i in range(100)]))
 
     for m in max_sum:
         if m > result:
