@@ -1,43 +1,32 @@
-for tc in range(10):
-    n = int(input())
-    ladder = []
-    for _ in range(100):
-        ladder.append(list(map(int, input().split())))
+# 1210_swea
+'''
+사다리 타고 내려가기
 
-    # 시작 지점
-    start_idx = []
-    for s in range(len(ladder[0])):
-        if ladder[0][s]:
-            start_idx.append(s)
+! 주의할점 : 옆으로 이동했을 때 다시 되돌아 갈 수 있음
+
+어려웠던 점
+1. 인덱스가 범위를 벗어남
+2. 코드가 같은 코드였는데 왜 실행이 안됐는지 의문
+'''
+
+for _ in range(10):
+    n = int(input())
+    ladder = [list(map(int, input().split())) for _ in range(100)]
+    start_idx = [s for s in range(100) if ladder[0][s] == 1]
 
     for s in start_idx:
-        y, x = s, 0
-        print('start :', x, y)
+        x, y = s, 0
+        while y < 99:
+            y += 1
+            if x > 0 and ladder[y][x-1]:
+                while x > 0 and ladder[y][x-1]:
+                    x -= 1
+            elif x < 99 and ladder[y][x+1]:
+                while x < 99 and ladder[y][x+1]:
+                    x += 1
 
-        # while y != 99:
-        #     y += 1
-        #
-        #     if ladder[y][x-1] and x > 0:
-        #         while x > 0 and ladder[y][x-1] == 1:
-        #             x -= 1
-        #
-        #     elif ladder[y][x+1] and x < 99:
-        #         while y < 99 and ladder[y][x+1] == 1:
-        #             x += 1
-        #
-        #     if ladder[y][x] == 2:
-        #         break
-        x += 1
-        if y > 0 and ladder[x][y - 1] == 1:
-            while y > 0 and ladder[x][y - 1] == 1:
-                y -= 1
-        elif y < 99 and ladder[x][y + 1] == 1:
-            while y < 99 and ladder[x][y + 1] == 1:
-                y += 1
+            if ladder[y][x] == 2:
+                result = s
+                break
 
-        if ladder[x][y] == 2:
-            result = s
-            break
-            print(result)
-
-        print(f'#{tc+1} {result}')
+    print(f'#{n} {result}')
