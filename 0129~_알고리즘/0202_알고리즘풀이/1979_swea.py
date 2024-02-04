@@ -4,6 +4,21 @@ https://swexpertacademy.com/main/talk/solvingClub/problemView.do?solveclubId=AY1
 '''
 T = int(input())
 
+def word(array, k):
+    result = 0
+    cnt = 0
+    for w in range(len(array)):
+        if array[w] == 1:
+            cnt += 1
+            if w == len(array)-1 and cnt == k:
+                result += 1
+        elif array[w] == 0:
+            if cnt == k:
+                result += 1
+            cnt = 0
+    return result
+
+
 for tc in range(T):
     n, k = map(int, input().split())
     array = [list(map(int, input().split())) for _ in range(n)]
@@ -13,25 +28,7 @@ for tc in range(T):
         row = array[i]
         col = [col[i] for col in array]
 
-        cnt = 0
-        for r in row:
-            if r == 1:
-                cnt += 1
-            elif r == 0:
-                if cnt == 3:
-                    result += 1
-                cnt = 0
-            print(f'{cnt},{result})
-
-
-        cnt = 0
-        for c in col:
-            if c == 1:
-                cnt += 1
-            elif c == 0:
-                if cnt == 3:
-                    result += 1
-                cnt = 0
-
+        result += word(row, k)
+        result += word(col, k)
 
     print(f'#{tc+1} {result}')
