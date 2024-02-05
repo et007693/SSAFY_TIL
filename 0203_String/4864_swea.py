@@ -16,3 +16,25 @@ for tc in range(T):
         print(f'#{tc+1} 1')
     else:
         print(f'#{tc+1} 0')
+
+# 2 - 구간합 이용
+# T = int(input())
+
+# for tc in range(T):
+#     s1 = input()
+#     s2 = input()
+#     length_s1 = 0
+#     length_s2 = 0
+#     result = 0
+
+#     for s in s1:
+#         length_s1 += 1
+#     for s in s2:
+#         length_s2 += 1
+
+#     for i in range(length_s2-length_s1+1):
+#         print(f's2 : {s2[i:i+length_s1]}, s1 : {s1}')
+#         if s2[i:i+length_s1] == s1:
+#             result = 1
+
+#     print(f'#{tc+1} {result}')
