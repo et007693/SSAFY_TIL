@@ -7,16 +7,16 @@ for tc in range(10):
     formula = input()
     forth = []
     stack = []
-    operator = False
+    operator = ''
 
     for f in formula:
         if operator:
             if f.isdigit():
                 forth.append(f)
                 forth.append('+')
+                operator = False
         elif f == '+':
             operator = True
-            pass
         else:
             forth.append(f)
 
