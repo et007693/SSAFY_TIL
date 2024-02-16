@@ -1,4 +1,4 @@
-# 5097_swea
+# 10722_swea
 '''
 https://swexpertacademy.com/main/talk/solvingClub/problemView.do?solveclubId=AY1S2R462h4DFAWX&contestProbId=AXRO_ZGqnokDFAXS&probBoxId=AY2YXC0qjRkDFAXh&type=USER&problemBoxTitle=240215_Queue_1&problemBoxCnt=3
 '''
