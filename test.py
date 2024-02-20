@@ -72,14 +72,54 @@
         
 # print(binary(a, 1, 400, 150))
 
-a = [1,5,4,9,6,7]
+# a = [1,5,4,9,6,7]
 
-# 선택정렬
-for i in range(len(a)-1):
-    min_idx = i
-    for j in range(i+1, len(a)):
-        if a[j] < a[min_idx]:
-            min_idx = j
-    a[min_idx], a[i] = a[i], a[min_idx]
+# # 선택정렬
+# for i in range(len(a)-1):
+#     min_idx = i
+#     for j in range(i+1, len(a)):
+#         if a[j] < a[min_idx]:
+#             min_idx = j
+#     a[min_idx], a[i] = a[i], a[min_idx]
     
-print(a)
+# print(a)
+
+c, r = map(int, input().split())
+k = int(input())
+arr = [[0]*c for _ in range(r)]
+
+cnt = 0
+line = 1
+dir = 0
+x = 0
+y = r
+
+while cnt < k:
+    if cnt <= r:
+        y -= 1
+        cnt += 1
+        print(x, y)
+
+    for _ in range(2):
+        for _ in range(c-line):
+            if dir == 0:
+                x += 1
+            elif dir == 2:
+                x -= 1
+            print(x, y)
+
+            cnt += 1
+        for _ in range(r-line):
+            if dir == 1:
+                y += 1
+            elif dir == 3:
+                y -= 1
+            cnt += 1
+            print(x, y)
+
+        dir = (dir + 1) % 4
+    line += 1
+    print(x, y)
+
+
+print(x,y)
