@@ -1,6 +1,8 @@
 # 1232_swea
 '''
 https://swexpertacademy.com/main/talk/solvingClub/problemBoxDetail.do?solveclubId=AY1S2R462h4DFAWX&probBoxId=AY3EiY6KKq4DFAXh
+재귀 연습이 어느정도 된듯
+!!return을 잘 해줘야 함 - 종료조건
 '''
 def cal(start=1):
     start = int(start)
