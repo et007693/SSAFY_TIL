@@ -180,10 +180,10 @@
 # print("Results:", results)
 
 # 나무 타이쿤
+# 나무 타이쿤
 n, m = map(int, input().split())
 tree = [list(map(int, input().split())) for _ in range(n)]
 tree = list(reversed(tree))
-tree_cnt = [[0] * n for _ in range(n)]
 result = 0
 
 dx = [0, 1, 1, 0, -1, -1, -1, 0, 1]
@@ -194,56 +194,60 @@ def plus(x, y):
     for i in range(4):
         mx = x + dx[i]
         my = y + dy[i]
-        print('start', mx, my)
         if 0 <= mx < n and 0 <= my < n:
             tree[my][mx] += 1
-            tree_cnt[my][mx] = 1
+            tree_bool[my][mx] = 1
 
-def nut(x, y):
-    plus(x, y)
-    for i, c in enumerate(range(4), start = 1):
+def nutrition_cnt(x, y):
+    plus(x,y)
+    print(tree)
+    for i in range(4):
         mx = x + dx[i]
         my = y + dy[i]
-        cnt1 = 0
-        cnt2 = 0
-        cnt3 = 0
-        cnt4 = 0
         if 0 <= mx < n and 0 <= my < n:
             # 대각선 나무만큼 성장
             for x2, y2 in [[-1,1],[-1,-1],[1,1],[1,-1]]:
                 mx2 = mx + x2
                 my2 = my + y2
-                # print('mx2, my2', mx2, my2)
-                # print(tree)
                 if 0 <= mx2 < n and 0 <= my2 < n and tree[my2][mx2] >= 1:
-                    f'cnt{i}' += 1
+                    tree_cnt[my2][mx2] += 1
 
-            tree[my][mx] += cnt
+def cut():
+    new = []
+    # 높이 2 이상 cut
+    for y in range(n):
+        for x in range(n):
+            if tree_bool[y][x] != 1 and tree[y][x] >= 2:
+                tree[y][x] -= 2
+                nutrition_cnt(x,y)
+
+def nutrition_sum():
+    for i in range(n):
+        for j in range(n):
+            tree[i][j] = tree[i][j] + tree_cnt[i][j]
 
 for _ in range(m):
+    tree_bool = [[0] * n for _ in range(n)]
+    tree_cnt = [[0] * n for _ in range(n)]
+
     x, y = 0, 0
     d, p = map(int, input().split())
 
     x = (x + (p * dx[d])) % n
     y = (y + (p * dy[d])) % n
 
-    nut(x, y)
-    # print(tree)
-
-    # 높이 2 이상 cut
-    for y in range(n):
-        for x in range(n):
-            if tree_cnt[y][x] != 1 and tree[y][x] >= 2:
-                tree[y][x] -= 1
+    # 키우고 -> 대각선 -> 합
+    nutrition_cnt(x, y)
+    nutrition_sum()
+    print(tree)
     tree_cnt = [[0] * n for _ in range(n)]
 
-    # print()
-
-    # for y in range(n):
-    #     for x in range(n):
-    #         if tree_cnt[y][x] != 1:
-    #             nut(x,y)
+    # 자르고 영양제
+    cut()
     # print(tree)
+    nutrition_sum()
+    # print(tree)
+    tree_cnt = [[0] * n for _ in range(n)]
 
 for t in tree:
     result += sum(t)
