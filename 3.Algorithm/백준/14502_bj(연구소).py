@@ -1,6 +1,7 @@
 # 14502_연구소
 '''
 https://www.acmicpc.net/problem/14502
+풀이 보고 풀었음
 bfs + dfs(조합) 문제
 itertools 사용했는데 백트래킹으로 조합 구하는 방식도 시도하기
 '''
