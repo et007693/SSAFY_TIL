@@ -20,5 +20,5 @@ from my_app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    
+    path('introduce/<str:username>', views.introduce_view, name='username'),
 ]
