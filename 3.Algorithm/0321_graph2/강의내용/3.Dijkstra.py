@@ -69,3 +69,6 @@ for i in range(n):
         print("INF", end=' ')
     else:
         print(distance[i], end=' ')
+
+
+        
