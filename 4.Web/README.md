@@ -33,3 +33,8 @@ model.objects.all()
 model.object.filter(attribute = 'name')
 
 # 수정, 삭제는 데이터를 할당(todo = Todo()) 후 삭제
+
+
+
+query 예시
+https://wayhome25.github.io/django/2017/04/01/django-ep9-crud/
