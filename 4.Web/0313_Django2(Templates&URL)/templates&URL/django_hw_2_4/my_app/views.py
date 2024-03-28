@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 # Create your views here.
-def introduce_view(request, username):
+def introduce(request, username):
     context = {
         'username' : username
     }
