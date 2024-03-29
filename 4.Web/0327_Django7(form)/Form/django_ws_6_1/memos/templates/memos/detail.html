@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<p>{{ memo.summary }}</p>
+<p>{{ memo.memo }}</p>
+<p>{{ memo.insert_time }}</p>
+<p>{{ memo.modi_time }}</p>
+<form action="{% url "memos:delete" memo.pk %}" method="POST">
+    {% csrf_token %}
+    <input type="submit" value="삭제">
+</form>
+<a href="{% url "memos:index" %}">[back]</a>
+{% endblock content %}
