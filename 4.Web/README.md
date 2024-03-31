@@ -34,6 +34,22 @@ model.object.filter(attribute = 'name')
 
 # 수정, 삭제는 데이터를 할당(todo = Todo()) 후 삭제
 
+# satic 추가 경로 설정(setting.py)
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',
+]
+
+# MEDIA_ROOT 설정
+MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_URL = 'media/'
+
+### urls.py
+from django.conf import settings
+from django.conf.ursl.static import static
+
+urlspatterns = [
+    
+] + static(setting.MEDIA_URL, document_root = settigs.MEDIA_ROOT)
 
 
 query 예시
