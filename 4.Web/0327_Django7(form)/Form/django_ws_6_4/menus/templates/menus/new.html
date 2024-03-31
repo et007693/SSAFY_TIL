@@ -2,10 +2,14 @@
 
 {% block content %}
   <h1>메뉴 생성 페이지</h1>
+
+
   <form method="POST">
     {% csrf_token %}
     {{ form.as_p }}
-    <input type="submit" value="CREATE">
+    <input class="btn btn-primary" type="submit" value="CREATE">
   </form>
   <a href="{% url 'menus:index' %}">[BACK]</a>
+
+
 {% endblock content %}
