@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <h1>전체 유저 목록</h1>
+  <ul>
+    {% for person in persons %}
+      <li>{{ person.username }}</li>
+      <ul>
+        <li>{{person.score}}</li>
+      </ul>
+      {% if person.pk == user.pk %}
+        <form action="{% url 'accounts:increase_score' person.pk %}" method="POST">
+          {% csrf_token %}
+          <input type="submit" value="Increase Score">
+        </form>
+      {% endif %}
+      <hr>
+    {% endfor %}
+  </ul>
+{% endblock content %}
