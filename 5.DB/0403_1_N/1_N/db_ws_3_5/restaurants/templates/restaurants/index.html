@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
 <h1>레스토랑 전체 목록</h1>
@@ -8,13 +9,12 @@
   {% for restaurant in restaurants %}
     <a href="{% url 'restaurants:detail' restaurant.pk %}">
       <li>이름 : {{ restaurant.name }}</li>
-      {% if restaurant.image %}
-        <img src="../../korean_food.jpg" alt="">
+      {% if restaurant.category.image %}
+      <img src="{{ restaurant.category.image.url }}" alt="" width='200' height='200'>
       {% else %}
         <p>이미지가 없습니다.</p>
         <p>종류 : {{ restaurant.category }}</p>
       {% endif %}
-      <li>종류 : {{ restaurant.category }}</li>
       <li>보유중인 메뉴 수 : {{ restaurant.menu_set.all|length }}</li>
     </a>
     <hr>

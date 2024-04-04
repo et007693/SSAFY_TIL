@@ -3,7 +3,6 @@ from .models import Restaurant, Menu
 
 
 class RestaurantForm(forms.ModelForm):
-    
     class Meta:
         model = Restaurant
         fields = '__all__'
@@ -12,9 +11,8 @@ class RestaurantForm(forms.ModelForm):
             'name': forms.TextInput(attrs={'class':'form-control'}),
             'descriptions':forms.Textarea(attrs={'class':'form-control'}),
             'address':forms.TextInput(attrs={'class':'form-control'}),
-            # 'opening_time':forms.TimeField()
-            'opening_time':forms.TimeField(widget=forms.TimeInput(attrs={'type': 'time', 'class': 'form-control'})),
-            # 'closing_time':forms.TimeField(widget=forms.TimeInput(attrs={'type': 'time', 'class': 'form-control'}))
+            'opening_time':forms.TextInput(attrs={'type': 'time', 'class': 'form-control'}),
+            'closing_time':forms.TextInput(attrs={'type': 'time', 'class': 'form-control'})
            }
 
 class MenuForm(forms.ModelForm):
