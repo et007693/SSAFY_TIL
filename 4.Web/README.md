@@ -54,3 +54,15 @@ urlspatterns = [
 
 query 예시
 https://wayhome25.github.io/django/2017/04/01/django-ep9-crud/
+
+# serializer views.py
+```python
+from rest_framework.response import Response
+from rest_framework.decorators import api_view
+from rest_framework import status
+```
+
+# serializer serializers.py
+```python
+from rest_framework import serializers
+```
