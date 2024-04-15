@@ -74,7 +74,11 @@ purifier = []
 result = 0
 
 for y in range(r):
+<<<<<<< HEAD:3.Algorithm/A형준비/17144_bj(미세먼지 안녕).py
+    dust.append(list(map(int, sys.stdin.readline().split())))
+=======
     dust.append(list(map(int, input().split())))
+>>>>>>> 01af120ceb9694dc11568119e3f131f81a1011f5:3.Algorithm/백준/17144_bj(미세먼지 안녕).py
     for x in range(c):
         if dust[y][x] == -1:
             purifier.append(y)
