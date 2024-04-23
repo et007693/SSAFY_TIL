@@ -58,8 +58,53 @@ pTag.style.fontSize = '2rem'
 pTag.style.border = '1px solid black'
 ```
 
-# n번째 요소 선택
+# 함수
+```javascript
+# 선언식
+function name() {
+}
+
+# 표현식
+const name = function() {
+}
+## 화살표 함수
+const name = param => statement
+
+# 객체 구조
+const user = {
+  name: 'alice',
+  'key with space' : true,
+  greeting() {
+    return 'hello'
+  }
+}
 ```
+
+# 배열
+```javascript
+# method
+push / pop
+unshift / shift
+
+# Array Helper Method
+// filter, find, some, every
+# foreach
+const numbers = [1,2,3]
+// 1
+numbers.forEach(function (num)){}
+// 2
+const name = function(num) {}
+number.forEach(name)
+
+# map
+// 1
+const arr2 = arr.map(function (param)) {}
+// 화살표 함수
+const arr2 = arr.map((param) => {})
+```
+
+```javascript
+# n번째 요소 선택
 const list1 = document.querySelector('li:nth-child(1)')
 const contact = document.querySelector('h2:nth-of-type(3)')
 ```
