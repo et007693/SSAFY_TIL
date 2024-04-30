@@ -91,3 +91,30 @@ const oninput = function(event) {
 const inputvalue = ref('')
 <input v-model='inputvalue'>
 ```
+
+# Basic Syntax2
+```html
+<!-- computed -->
+# 의존하는 데이터가 변경될 때 실행, html에서 name을 사용해서 값 return
+const name = computed(() => {
+  return statement
+})
+
+<!-- watch -->
+watch(message, (newValue, oldValue) => {
+  massageLength.value = newValue.length
+})
+
+<!-- if -->
+<p v-if='boolean'>statement</p>
+<p v-else='boolean'>statement2</p>
+
+<!-- v-for -->
+<div v-for='item in items' :key='item.pk'>
+  {{ item.text }}
+</div>
+<div v-for='(item, key, index) in items' :key='item.pk'>
+  {{ item.text }}
+</div>
+
+```
