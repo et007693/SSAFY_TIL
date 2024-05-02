@@ -118,3 +118,16 @@ watch(message, (newValue, oldValue) => {
 </div>
 
 ```
+
+# Single_File_Component
+```html
+<!-- vite 프로젝트 생성 -->
+$ npm create vue@latest
+
+$ cd vue-project
+$ npm install
+$ npm run dev
+
+<!-- import components -->
+import { ref } from 'vue'
+import name from '@/components/name.vue'
