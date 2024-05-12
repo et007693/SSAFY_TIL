@@ -6,7 +6,7 @@ import { RouterLink, RouterView } from 'vue-router'
       <nav>
         <RouterLink :to="{ name: 'home' }">Home</RouterLink>
         <RouterLink :to="{ name: 'search' }">Search</RouterLink>
-        <!-- <RouterLink :to="watch-later">Later</RouterLink> -->
+        <RouterLink :to="{ name: 'watch-later'}">Later</RouterLink>
         <!-- <RouterLink :to="like-channel">Channel</RouterLink> -->
       </nav>
       <RouterView />

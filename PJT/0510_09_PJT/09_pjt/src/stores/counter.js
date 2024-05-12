@@ -175,108 +175,6 @@ export const useCounterStore = defineStore('counter', () => {
           "publishTime": "2023-03-28T11:45:45Z"
         }
       },
-      {
-        "kind": "youtube#searchResult",
-        "etag": "9ZdKt0-ofDwe-yGAsWYmogGTFlI",
-        "id": {
-          "kind": "youtube#video",
-          "videoId": "Pjni4_-o8a8"
-        },
-        "snippet": {
-          "publishedAt": "2022-07-29T10:20:48Z",
-          "channelId": "UCNZzbT6flEsfPDZ7Pjd-VXw",
-          "title": "민주주의 얘기 지겹지만...&quot;안하기가 쉽지 않아🐳&quot; - 유혜영 교수, 신기욱 소장, 김만권 교수, 김누리 교수 / SBS D포럼(SDF)",
-          "description": "코로나를 겪으면서 마스크를 써야하는지, 아닌지 같은 개인 삶의 이슈가 사실은 정치의 영역이었다는 것을 새삼 깨닫게 되는 나날 ...",
-          "thumbnails": {
-            "default": {
-              "url": "https://i.ytimg.com/vi/Pjni4_-o8a8/default.jpg",
-              "width": 120,
-              "height": 90
-            },
-            "medium": {
-              "url": "https://i.ytimg.com/vi/Pjni4_-o8a8/mqdefault.jpg",
-              "width": 320,
-              "height": 180
-            },
-            "high": {
-              "url": "https://i.ytimg.com/vi/Pjni4_-o8a8/hqdefault.jpg",
-              "width": 480,
-              "height": 360
-            }
-          },
-          "channelTitle": "SBS D FORUM (SDF)",
-          "liveBroadcastContent": "none",
-          "publishTime": "2022-07-29T10:20:48Z"
-        }
-      },
-      {
-        "kind": "youtube#searchResult",
-        "etag": "v7cHxbExkU98yqN5Fu0svXo4PYo",
-        "id": {
-          "kind": "youtube#video",
-          "videoId": "ElBGPRl0KB4"
-        },
-        "snippet": {
-          "publishedAt": "2023-06-22T00:39:23Z",
-          "channelId": "UCTqjvIsOrfE2y8CxdmNkceQ",
-          "title": "스탠퍼드대학 신기욱교수가 한국 고등학생들에게, 솔직토크🍯",
-          "description": "2023 충렬여고 명사 초청 특강 다시보기! ::스탠퍼드대학 사회학과 신기욱 교수 #스탠퍼드대학 #고등학생 #글로벌 #인재상 #입시 ...",
-          "thumbnails": {
-            "default": {
-              "url": "https://i.ytimg.com/vi/ElBGPRl0KB4/default.jpg",
-              "width": 120,
-              "height": 90
-            },
-            "medium": {
-              "url": "https://i.ytimg.com/vi/ElBGPRl0KB4/mqdefault.jpg",
-              "width": 320,
-              "height": 180
-            },
-            "high": {
-              "url": "https://i.ytimg.com/vi/ElBGPRl0KB4/hqdefault.jpg",
-              "width": 480,
-              "height": 360
-            }
-          },
-          "channelTitle": "충렬여자고등학교",
-          "liveBroadcastContent": "none",
-          "publishTime": "2023-06-22T00:39:23Z"
-        }
-      },
-      {
-        "kind": "youtube#searchResult",
-        "etag": "iezeqc0qkqysrOVudr7kO_D4BUk",
-        "id": {
-          "kind": "youtube#video",
-          "videoId": "T0118WT1rh0"
-        },
-        "snippet": {
-          "publishedAt": "2023-12-15T10:30:32Z",
-          "channelId": "UCEAURqzD092U6h1yDfNsPlw",
-          "title": "(골목카페)그냥 카페를 접는 것이 정답일까?  커피비지니스의 고인물 커피의 신이 답을 알려 드립니다",
-          "description": "커피로스팅 #카페#맛집#네이버마케팅#커피의신 #커피토크.",
-          "thumbnails": {
-            "default": {
-              "url": "https://i.ytimg.com/vi/T0118WT1rh0/default.jpg",
-              "width": 120,
-              "height": 90
-            },
-            "medium": {
-              "url": "https://i.ytimg.com/vi/T0118WT1rh0/mqdefault.jpg",
-              "width": 320,
-              "height": 180
-            },
-            "high": {
-              "url": "https://i.ytimg.com/vi/T0118WT1rh0/hqdefault.jpg",
-              "width": 480,
-              "height": 360
-            }
-          },
-          "channelTitle": "커피의 신 기욱",
-          "liveBroadcastContent": "none",
-          "publishTime": "2023-12-15T10:30:32Z"
-        }
-      },
     ]
   )
 
@@ -287,9 +185,23 @@ export const useCounterStore = defineStore('counter', () => {
 
   const watchLater = ref([])
 
+  const toggleWatchLater = function(videoid, video) {
+    const idx = watchLater.value.findIndex(item => item.videoID === videoid)
+    if (idx !== -1) {
+      watchLater.value.splice(idx, 1)
+    } else {
+      watchLater.value.push({ 'videoID': videoid, 'detail': video })
+    }
+  }
+  
+
+  const isLatervideo = function (videoid) {
+    const video = watchLater.value.find(video => video.videoID === videoid)
+    return video
+  }
   // const LikeChannel = ref([
 
   // ])
 
-    return { videos, GetVideo, watchLater }
+    return { videos, GetVideo, watchLater, toggleWatchLater, isLatervideo }
 }, { persist: true })

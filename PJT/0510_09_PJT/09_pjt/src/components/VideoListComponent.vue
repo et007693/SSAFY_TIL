@@ -1,4 +1,5 @@
 <template>
+  {{ videos }}
   <div class="video-list">
     <div v-for="video in videos" class="video-card" @click="videodetail(video.id.videoId)">
       <img :src="video.snippet.thumbnails.default.url" alt="" class="video-image">
@@ -14,7 +15,10 @@ import { useCounterStore } from '@/stores/counter'
 import router from '@/router'
 
 const store = useCounterStore()
-const videos = store.videos
+defineProps({
+  videos:Array
+})
+
 
 const videodetail = function(videoid) {
   router.push({ name:'detail', params: { videoid:videoid }})

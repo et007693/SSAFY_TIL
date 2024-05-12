@@ -5,7 +5,7 @@
       <input type="text" id="searchInput" placeholder="검색어를 입력하세요" v-model="query">
       <button type="submit">검색</button>
     </form>
-    <VideoListComponent />
+    <VideoListComponent :videos="videos"/>
   </div>
 </template>
 
@@ -17,6 +17,7 @@ import VideoListComponent from '@/components/VideoListComponent.vue';
 
 const store = useCounterStore()
 const query = ref('')
+const videos = store.videos
 
 const apiKey = 'AIzaSyDKnoh7lsnw1Ye9a_5GLDk7VLnHmctBH9E'
 const apiUrl = 'https://www.googleapis.com/youtube/v3/search'
@@ -29,8 +30,8 @@ const searchFunction = function() {
       url: url
     })
     .then((response) => {
-      console.log(response)
       store.videos.value = response.data
+      console.log(store.videos.value)
     })
     .catch((error) => {
       console.log(error)
