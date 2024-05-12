@@ -282,11 +282,14 @@ export const useCounterStore = defineStore('counter', () => {
 
   const GetVideo = function (videoid) {
     const video = videos.value.find(video => video.id.videoId === videoid)
+    return video
   }
+
+  const watchLater = ref([])
 
   // const LikeChannel = ref([
 
   // ])
 
-    return { videos, GetVideo }
-})
+    return { videos, GetVideo, watchLater }
+}, { persist: true })
