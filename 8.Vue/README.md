@@ -119,7 +119,7 @@ watch(message, (newValue, oldValue) => {
 
 ```
 
-# Single_File_Component
+# Single File Component
 ```html
 <!-- vite 프로젝트 생성 -->
 $ npm create vue@latest
