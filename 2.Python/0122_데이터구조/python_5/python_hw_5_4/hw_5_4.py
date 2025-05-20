@@ -1,4 +1,3 @@
-# 아래 함수를 수정하시오.
 def find_min_max(origin_list):
     max_num = 0
     min_num = origin_list[0]

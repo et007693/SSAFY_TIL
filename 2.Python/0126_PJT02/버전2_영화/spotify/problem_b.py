@@ -4,7 +4,6 @@ from examples.spotify_config import getHeaders
 
 
 def get_popular_tracks():
-    # 여기에 코드를 작성합니다.
     URL = 'https://api.spotify.com/v1'
     headers = getHeaders()
 
@@ -26,7 +25,6 @@ def get_popular_tracks():
     return music_list
 
 
-# 아래의 코드는 수정하지 않습니다.
 if __name__ == '__main__':
     """
     (주의) 시기에 따라 아래 예시 출력과 차이가 있을 수 있음

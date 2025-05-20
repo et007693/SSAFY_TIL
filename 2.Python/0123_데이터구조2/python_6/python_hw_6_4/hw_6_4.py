@@ -1,4 +1,3 @@
-# 아래 함수를 수정하시오.
 def add_item_to_dict(dictionary, k, v):
     new_dict = dictionary.copy()
     add_dict = {k:v}

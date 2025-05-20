@@ -19,7 +19,6 @@ catalog[-1][2] = '목표 달성의 비밀'
 
 
 print('catalog와 backup_catalog를 비교한 결과')
-# 식별 연산자로 catalog와 backup_catalog를 비교한 결과를 출력하시오.
 print()
 
 print('backup_catalog : ')

@@ -1,4 +1,3 @@
-# 아래 함수를 수정하시오.
 def remove_duplicates(origin_list):
     new_lst = list(set(origin_list))
     return new_lst

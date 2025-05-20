@@ -1,4 +1,3 @@
-# 아래 함수를 수정하시오.
 def difference_sets(*args):
     return args[0] - args[1]
 

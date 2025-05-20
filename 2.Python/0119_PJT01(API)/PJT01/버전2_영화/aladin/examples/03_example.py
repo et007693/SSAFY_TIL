@@ -1,4 +1,3 @@
-# open 및 json 모듈 사용예시
 
 import json
 

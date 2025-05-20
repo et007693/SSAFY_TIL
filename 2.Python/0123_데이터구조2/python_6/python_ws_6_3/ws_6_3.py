@@ -1,4 +1,3 @@
-# 아래 함수를 수정하시오.
 def intersection_sets(*args):
     intersection_set = args[0]
     for i in args:

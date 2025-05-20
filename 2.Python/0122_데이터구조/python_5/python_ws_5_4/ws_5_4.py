@@ -1,4 +1,3 @@
-# 아래 함수를 수정하시오.
 def capitalize_words(string):
     up_string = ''
     for s in string.split():

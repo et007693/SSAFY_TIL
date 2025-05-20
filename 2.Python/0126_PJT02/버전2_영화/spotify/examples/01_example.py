@@ -1,4 +1,3 @@
-# requests 사용 예시 1
 
 import requests
 

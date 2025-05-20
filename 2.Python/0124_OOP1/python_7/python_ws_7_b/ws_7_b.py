@@ -1,4 +1,3 @@
-# 아래에 코드를 작성하시오.
 class Myth:
     type_of_myth = 0
 

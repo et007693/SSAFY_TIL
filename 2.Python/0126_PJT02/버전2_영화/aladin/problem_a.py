@@ -3,7 +3,6 @@ import requests
 URL = 'http://www.aladin.co.kr/ttb/api/ItemSearch.aspx'
 
 params = {
-    'ttbkey' : 'ttbthdckddyd1231146001',
     'Query' : '파울로 코엘료',
     'QueryType' : 'Author',
     'MaxResults' : 20,
@@ -14,7 +13,6 @@ params = {
 }
 
 def author_works():
-    # 여기에 코드를 작성합니다.
     book_list = []
     response = requests.get(URL, params=params).json()
     
@@ -23,6 +21,5 @@ def author_works():
     
     return book_list
 
-# 아래의 코드는 수정하지 않습니다.
 if __name__ == '__main__':
     print(author_works())

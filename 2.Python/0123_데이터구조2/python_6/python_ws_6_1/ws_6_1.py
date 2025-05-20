@@ -1,4 +1,3 @@
-# 아래 함수를 수정하시오.
 def union_sets(*args):
     union_set = set()
     for i in args:

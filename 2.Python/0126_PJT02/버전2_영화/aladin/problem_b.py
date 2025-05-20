@@ -4,7 +4,6 @@ from pprint import pprint
 URL = 'http://www.aladin.co.kr/ttb/api/ItemSearch.aspx'
 
 params = {
-    'ttbkey' : 'ttbthdckddyd1231146001',
     'Query' : '파울로 코엘료',
     'QueryType' : 'Author',
     'MaxResults' : 20,
@@ -15,7 +14,6 @@ params = {
 }
 
 def best_review_books():
-    # 여기에 코드를 작성합니다.
     book_list = []
     response = requests.get(URL, params=params).json()
 
@@ -26,6 +24,5 @@ def best_review_books():
     return book_list
 
 
-# 아래의 코드는 수정하지 않습니다.
 if __name__ == '__main__':
     pprint(best_review_books())

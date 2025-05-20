@@ -4,7 +4,6 @@ from pprint import pprint
 URL = 'http://www.aladin.co.kr/ttb/api/ItemSearch.aspx'
 
 params = {
-    'ttbkey' : 'ttbthdckddyd1231146001',
     'QueryType' : 'Title',
     'MaxResults' : 20,
     'start' : 1,
@@ -36,7 +35,6 @@ def author_other_works(title):
     
     return book_list
 
-# 아래의 코드는 수정하지 않습니다.
 if __name__ == '__main__':
     pprint(author_other_works('베니스의 상인'))
 

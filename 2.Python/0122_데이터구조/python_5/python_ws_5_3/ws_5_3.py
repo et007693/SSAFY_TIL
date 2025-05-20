@@ -1,4 +1,3 @@
-# 아래 함수를 수정하시오.
 def sort_tuple(origin_tuple):
     new_tuple = tuple(sorted(origin_tuple))
     return new_tuple

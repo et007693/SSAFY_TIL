@@ -1,4 +1,3 @@
-# 아래 함수를 수정하시오.
 def get_keys_from_dict(dic):
     return list(dic.keys())
 

@@ -21,9 +21,6 @@ def recur_example(number):
 result_1 = recur_example(5)
 print(result_1) # 5 + 4 + 3 + 2 + 1 = 15
 
-# 거듭 제곱 재귀 함수
-# base = 밑, exponent = 지수
-# base의 exponent승 == 2의 3승
 def power(base, exponent):
     '''
         함수(2, 3) 실행
@@ -44,7 +41,6 @@ def power(base, exponent):
 result_2 = power(2, 3)
 print(result_2) # 2 * 2 * 2 * 1 = 8
 
-# 모든 자릿수 더하기 함수
 def sum_of_digits(number):
     '''
         함수(321) 실행

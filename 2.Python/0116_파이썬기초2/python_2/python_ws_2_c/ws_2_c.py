@@ -54,7 +54,6 @@ data = [{'has_more': False,
             }],
   'type': 'page_or_database'}]
 
-# 아래에 코드를 작성하시오.
 first_data = {'제목' : data[0]['results'][0]['properties']['제목']['title'][0]['text']['content'], 
               '일차' : int(data[0]['results'][0]['properties']['일차']['number']), 
               '단계' : data[0]['results'][0]['properties']['단계']['select']['name'] + '단계',

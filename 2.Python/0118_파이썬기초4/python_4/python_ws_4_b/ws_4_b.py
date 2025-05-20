@@ -13,7 +13,6 @@ food_list = [
     },
 ]
 
-# 아래에 코드를 작성하시오.
 
 # sol1
 # for food in food_list:

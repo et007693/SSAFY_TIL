@@ -4,7 +4,6 @@ from examples.spotify_config import getHeaders
 
 
 def get_tracks():
-    # 여기에 코드를 작성합니다.
     URL = 'https://api.spotify.com/v1'
     headers = getHeaders()
 
@@ -24,8 +23,6 @@ def get_tracks():
 
     return music_list
 
-
-# 아래의 코드는 수정하지 않습니다.
 if __name__ == '__main__':
     """
     장르가 k-pop인 음악트랙 20개 가져오기

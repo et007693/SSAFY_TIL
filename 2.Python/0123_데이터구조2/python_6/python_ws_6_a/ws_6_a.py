@@ -4,7 +4,6 @@ my_dict = {
         (0, 0): '튜플도 키값으로 사용가능'
     }
 
-# 아래에 코드를 작성하시오.
 for k in my_set:
     if k not in my_dict:
         my_dict[k] = None

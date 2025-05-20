@@ -4,12 +4,7 @@ Spotify에 요청을 보내기 위한 Header파일
 
 import requests
 
-# 📌 여기에 발급받은 API_CLIENT_ID와 API_CLIENT_SECRET을 넣으세요.
 API_URL = 'https://api.spotify.com/v1'
-API_CLIENT_ID = 'd66f026b4b0b493a868a1d719c1160f6'
-API_CLIENT_SECRET = 'df96094fbbe2481f8620918c1bdaef10'
-
-# 아래 코드는 수정하지 않습니다.
 data = {
     'grant_type': 'client_credentials',
     'client_id': API_CLIENT_ID,
@@ -18,7 +13,6 @@ data = {
 
 
 def getHeaders():
-    # Access Token 발급받기(유효 시간은 한 시간, 이 후 새로 요청 필요)
     secure_key = requests.post(
         'https://accounts.spotify.com/api/token',
         headers={'Content-Type': 'application/x-www-form-urlencoded'},
@@ -27,7 +21,6 @@ def getHeaders():
     # print('access token: ', secure_key.get('access_token'))
 
     access_token = secure_key.get('access_token')
-    ACCESS_TOKEN = access_token
 
     headers = {
         'Authorization': f'Bearer {ACCESS_TOKEN}',

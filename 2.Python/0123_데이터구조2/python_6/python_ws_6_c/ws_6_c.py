@@ -26,7 +26,6 @@ data = [
 
 key_list = ['name', 'company', 'is_collapsible']
 
-# 아래에 코드를 작성하시오.
 for d in data:
     for k in key_list:
         if d.get(k) != True:

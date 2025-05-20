@@ -1,4 +1,3 @@
-# 아래 함수를 수정하시오.
 def even_elements(origin_list):
     new_list = []
     for num in origin_list:

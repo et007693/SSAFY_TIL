@@ -1,4 +1,3 @@
-# 아래 함수를 수정하시오.
 def get_value_from_dict(dict, k):
     return dict.get(k)
 
