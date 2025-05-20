@@ -32,7 +32,6 @@ def blossom():
         red = [[0] * m for _ in range(n)]
         cnt = 0
         while g_start or r_start:
-            # print(g_start, r_start)
             for g_s in g_start:
                 print(g_s)
                 tmp_g = diffusion(g_s, g, green, red)

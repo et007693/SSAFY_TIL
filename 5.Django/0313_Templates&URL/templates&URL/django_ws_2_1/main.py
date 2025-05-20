@@ -2,7 +2,6 @@ import requests
 from pprint import pprint
 
 API_URL = 'http://www.aladin.co.kr/ttb/api/ItemList.aspx'
-API_KEY = 'ttbthdckddyd1231146001'
 params = {
     'ttbkey': API_KEY,
     'QueryType' : 'ItemNewSpecial',

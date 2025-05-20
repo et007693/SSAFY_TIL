@@ -11,7 +11,6 @@ def index(request):
 
 def api_data(request):
     API_URL = 'http://www.aladin.co.kr/ttb/api/ItemList.aspx'
-    API_KEY = 'ttbthdckddyd1231146001'
     params = {
         'ttbkey': API_KEY,
         'QueryType' : 'ItemNewSpecial',

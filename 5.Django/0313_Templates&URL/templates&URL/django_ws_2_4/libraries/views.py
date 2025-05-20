@@ -3,7 +3,6 @@ from django.shortcuts import render
 from pprint import pprint
 
 API_URL = 'https://www.aladin.co.kr/ttb/api/ItemList.aspx'
-API_KEY = 'ttbthdckddyd1231146001'
 
 # Create your views here.
 def index(request):

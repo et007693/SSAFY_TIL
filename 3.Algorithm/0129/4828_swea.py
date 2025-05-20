@@ -1,4 +1,3 @@
-# 내장 함수 미사용
 a = int(input())
 
 for i in range(a):
